@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext');
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    max-height: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/space.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+    
+}
+
+.selectYears{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    text-align-last:center; 
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 25px;
+
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #2D2C4D;
+    scrollbar-highlight-color:#7D7E94;
+    scrollbar-3dlight-color: #7D7E94;
+    scrollbar-darkshadow-color: #2D2C4D;
+    scrollbar-track-color: #7D7E94;
+    scrollbar-arrow-color: red; 
+}
+
+option{
+    background-color: black;
+}
+
+.mainHeader{
+    font-size: 40px; 
+    color: white; 
+    position: absolute;
+    margin-bottom: 150px;
+}
+
+hr{
+    margin-bottom: 100px;
+    position: absolute;
+}
+
+
+:focus{outline: none;}
+
+
+::-webkit-scrollbar {
+    display: none;
+    }
+
+.wrapper {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .fetchdata {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        input {
+            background: none;
+            border-width: 0px;
+            border: none;
+            padding: 7px 0;
+            border-bottom: 3px solid #ccc;
+            color: #ccc;
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 1em;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+
+
+        .fetchdata__item {
+            background: rgba(27, 33, 35, 0.1);
+            padding: 1em;
+        }
+    }
+
+}
+
+
+.modal {
+    height: 100%;
+    width: 100%
+}
+
+.modal__container {
+    display: flex;
+    color: #000;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    img {
+        height: 100%;
+        width: 30%;
+        margin: 1em;
+    }
+
+    .modal__imagecontainer {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .modal__textcontainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.ReactModal__Content {
+    opacity: 0;
+  }
+  
+  .ReactModal__Content--after-open {
+    opacity: 1;
+    transition: opacity 1000ms;
+    top: 20% !important;
+    left: 20% !important;
+    right: 20% !important;
+    bottom: 20% !important;
+  }
+  
+  .ReactModal__Content--before-close {
+    opacity: 0;
+  }
+
+  .data__container {
+      margin-top: 350px;
+      position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+  @media #{$tablet}{
+    .modal__container {
+        flex-direction: column;
+        overflow: initial;
+        img {
+            width: 100%;
+        }
+    }
+    .ReactModal__Overlay {
+        top: 3% !important;
+        left: 3% !important;
+        right: 3% !important;
+        bottom: 3% !important;
+    }
+
+    .ReactModal__Content--after-open {
+        top: 3% !important;
+        left: 3% !important;
+        right: 3% !important;
+        bottom: 3% !important; 
+    }
+
+    .data__container {
+        width: 100%;
+    }
+}
+
